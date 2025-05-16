@@ -70,7 +70,9 @@
             Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam
             nam ipsum tenetur suscipit voluptatum nam et est corrupti.
           </p>
-          <a href="#" class="btn">read more <i class="fa-solid fa-arrow-right-long"></i></a>
+          <a href="#" class="btn"
+            >read more <i class="fa-solid fa-arrow-right-long"></i
+          ></a>
         </div>
         <div class="right-about">
           <img src="./about.jpg" alt="about image" />
@@ -78,31 +80,63 @@
       </div>
     </section>
 
-
+    <section id="value-section">
+      <div class="container">
+        <div class="title-value">
+          <h2>Our Value</h2>
+          <p>What we value most</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img src="./values-1.png" alt="value 1" />
+            <h3>Ad cupiditate sed est odio</h3>
+            <p>
+              Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur
+              sit. Et veritatis id.
+            </p>
+          </div>
+          <div class="card">
+            <img src="./values-2.png" alt="value 2" />
+            <h3>Voluptatem voluptatum alias</h3>
+            <p>
+              Repudiandae amet nihil natus in distinctio suscipit id. Doloremque
+              ducimus ea sit non.
+            </p>
+          </div>
+          <div class="card">
+            <img src="./values-3.png" alt="value 2" />
+            <h3>Fugit cupiditate alias nobis.</h3>
+            <p>
+              Quam rem vitae est autem molestias explicabo debitis sint. Vero
+              aliquid quidem commodi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <script>
-  const header = document.querySelector("header");
-  const heroSection = document.querySelector("#hero-section");
-  const heroImg = document.querySelector("#hero-img");
+      const header = document.querySelector("header");
+      const heroSection = document.querySelector("#hero-section");
+      const heroImg = document.querySelector("#hero-img");
 
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        header.classList.add("transparent");
-        header.classList.remove("scrolled");
-      } else {
-        header.classList.remove("transparent");
-        header.classList.add("scrolled");
-      }
-    },
-    {
-      root: null,
-      threshold: 0.90,
-    }
-  );
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            header.classList.add("transparent");
+            header.classList.remove("scrolled");
+          } else {
+            header.classList.remove("transparent");
+            header.classList.add("scrolled");
+          }
+        },
+        {
+          root: null,
+          threshold: 0.9,
+        }
+      );
 
-  observer.observe(heroImg);
-</script>
-
+      observer.observe(heroImg);
+    </script>
   </body>
 </html>

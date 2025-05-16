@@ -16,6 +16,7 @@
   justify-content: space-between;
   padding: 0 12px;
   @media screen and (max-width: 767px) {
+    padding: 0 12px;
   }
 }
 
@@ -124,6 +125,7 @@ header {
       padding-top: 3rem;
       padding-bottom: 3rem;
       flex-direction: column-reverse;
+      margin-top: 30px; /*من عندي*/
     }
     img {
       max-width: 100%;
@@ -156,7 +158,6 @@ header {
     .links {
       display: flex;
       flex-wrap: wrap;
-
       align-items: center;
       gap: 25px;
       margin-top: 40px;
@@ -188,7 +189,6 @@ header {
 }
 
 #about-section {
-  background-color: #f2f5fc;
   margin: 64px 0;
   width: 100%;
   display: flex;
@@ -252,6 +252,99 @@ header {
   }
 }
 
+#value-section {
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title-value {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding-bottom: 60px;
+      h2 {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 15.6px;
+        text-align: center;
+        text-transform: uppercase;
+        word-spacing: 0px;
+        color: #4154f1;
+        padding: 8px 20px;
+        border-radius: 50px;
+        background-color: #e7e8f8;
+      }
+      p {
+        font-family: "Nunito", sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: normal;
+        line-height: 48px;
+        text-align: center;
+        text-transform: none;
+        vertical-align: baseline;
+        word-spacing: 0px;
+        color: #012970;
+      }
+    }
+    .cards {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      row-gap: 30px;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      .card {
+        width: 356px;
+        max-width: 100%;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @media screen and (max-width: 767px) {
+          width: 461px;
+        }
+
+        img {
+          width: 296px;
+          padding: 30px 50px;
+          max-width: 100%;
+          /* transform: matrix(1.00005, 0, 0, 1.00005, 0, 0); */
+          transition: 0.5s;
+        }
+        h3 {
+          font-family: "Nunito", sans-serif;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 28.8px;
+          text-align: center;
+          color: #012970;
+          margin-bottom: 18px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          color: #444444;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
+
 /* animation */
 @keyframes up-down {
   0% {
@@ -276,3 +369,6 @@ header.scrolled {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover img {
+  transform: scale(0.9);
+}
