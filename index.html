@@ -6,14 +6,40 @@
     <title>Document</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- odometer styles -->
+    <link
+      rel="stylesheet"
+      href="https://github.hubspot.com/odometer/themes/odometer-theme-default.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://github.hubspot.com/odometer/themes/odometer-theme-digital.css"
+    />
+    <script src="https://github.hubspot.com/odometer/odometer.js"></script>
+
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
+    <!-- باقي الصفحة زي ما هي ... -->
     <header>
       <div class="container">
         <div class="logo">
@@ -22,8 +48,8 @@
         </div>
         <div class="right">
           <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
+            <a href="#hero-section">Home</a>
+            <a href="#about-section">About</a>
             <a href="#">Services</a>
             <a href="#">Portfolio</a>
             <a href="#">Team</a>
@@ -50,7 +76,9 @@
             <a href="#" class="btn"
               >Get Started <i class="fa-solid fa-arrow-right-long"></i
             ></a>
-            <a><i class="fa-regular fa-circle-play"></i> Watch Video</a>
+            <a class="watch"
+              ><i class="fa-regular fa-circle-play"></i> Watch Video</a
+            >
           </div>
         </div>
         <img id="hero-img" src="./hero-img.png" alt="" />
@@ -59,7 +87,7 @@
 
     <section id="about-section">
       <div class="container">
-        <div class="left-about">
+        <div class="left-about wow animate__animated animate__slideInUp">
           <h3>Who We Are</h3>
           <h2>
             Expedita voluptas omnis cupiditate totam eveniet nobis sint iste.
@@ -71,10 +99,13 @@
             nam ipsum tenetur suscipit voluptatum nam et est corrupti.
           </p>
           <a href="#" class="btn"
-            >read more <i class="fa-solid fa-arrow-right-long"></i
+             class="p-end">read more <i class="fa-solid fa-arrow-right-long"></i
           ></a>
         </div>
-        <div class="right-about">
+        <div
+          class="right-about wow animate__animated animate__fadeIn"
+          style="animation-delay: 0.4s"
+        >
           <img src="./about.jpg" alt="about image" />
         </div>
       </div>
@@ -82,12 +113,15 @@
 
     <section id="value-section">
       <div class="container">
-        <div class="title-value">
+        <div class="title-value wow animate__animated animate__slideInUp">
           <h2>Our Value</h2>
           <p>What we value most</p>
         </div>
         <div class="cards">
-          <div class="card">
+          <div
+            class="card wow animate__animated animate__slideInUp"
+            style="animation-delay: 0.4s"
+          >
             <img src="./values-1.png" alt="value 1" />
             <h3>Ad cupiditate sed est odio</h3>
             <p>
@@ -95,7 +129,10 @@
               sit. Et veritatis id.
             </p>
           </div>
-          <div class="card">
+          <div
+            class="card wow animate__animated animate__slideInUp"
+            style="animation-delay: 0.6s"
+          >
             <img src="./values-2.png" alt="value 2" />
             <h3>Voluptatem voluptatum alias</h3>
             <p>
@@ -103,7 +140,10 @@
               ducimus ea sit non.
             </p>
           </div>
-          <div class="card">
+          <div
+            class="card wow animate__animated animate__slideInUp"
+            style="animation-delay: 0.8s"
+          >
             <img src="./values-3.png" alt="value 2" />
             <h3>Fugit cupiditate alias nobis.</h3>
             <p>
@@ -115,12 +155,286 @@
       </div>
     </section>
 
+    <section
+      id="states-section"
+      class="wow animate__animated animate__slideInUp"
+    >
+      <div class="container">
+        <div class="state">
+          <i class="fa-regular fa-face-smile" style="color: #4154f1"></i>
+          <div class="state-text">
+            <h2 id="count-1" class="odometer count wow">0</h2>
+            <p>Happy Clients</p>
+          </div>
+        </div>
+        <div class="state">
+          <i class="fa-regular fa-newspaper" style="color: #ee6c20"></i>
+          <div class="state-text">
+            <h2 id="count-2" class="odometer count wow">0</h2>
+            <p>Projects</p>
+          </div>
+        </div>
+        <div class="state">
+          <i class="fa-solid fa-headset" style="color: #15be56"></i>
+          <div class="state-text">
+            <h2 id="count-3" class="odometer count wow">0</h2>
+            <p>Hours Of Support</p>
+          </div>
+        </div>
+        <div class="state">
+          <i class="fa-solid fa-users" style="color: #bb0852"></i>
+          <div class="state-text">
+            <h2 id="count-4" class="odometer count wow">0</h2>
+            <p>Hard Workers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features-section">
+      <div class="container">
+        <div class="title-value wow animate__animated animate__slideInUp">
+          <h2>Features</h2>
+          <p>Our Advacedd Features</p>
+        </div>
+        <div class="feat-content">
+          <div
+            class="feat-img wow animate__animated animate__fadeIn"
+            style="animation-delay: 0.4s"
+          >
+            <img src="./features.png" alt="feat-img" />
+          </div>
+          <div class="feat-text">
+            <div
+              class="feat-line wow animate__animated animate__slideInUp"
+              style="animation-delay: 0.1s"
+            >
+              <span><i class="fa-solid fa-check"></i></span>
+              <h3>Eos aspernatur rem</h3>
+            </div>
+            <div
+              class="feat-line wow animate__animated animate__slideInUp"
+              style="animation-delay: 0.2s"
+            >
+              <span><i class="fa-solid fa-check"></i></span>
+              <h3>Facilis neque ipsa</h3>
+            </div>
+            <div
+              class="feat-line wow animate__animated animate__slideInUp"
+              style="animation-delay: 0.3s"
+            >
+              <span><i class="fa-solid fa-check"></i></span>
+              <h3>Volup amet volupt</h3>
+            </div>
+            <div
+              class="feat-line wow animate__animated animate__slideInUp"
+              style="animation-delay: 0.4s"
+            >
+              <span><i class="fa-solid fa-check"></i></span>
+              <h3>Rerum omnis sint</h3>
+            </div>
+            <div
+              class="feat-line wow animate__animated animate__slideInUp"
+              style="animation-delay: 0.5s"
+            >
+              <span><i class="fa-solid fa-check"></i></span>
+              <h3>Alias possimus</h3>
+            </div>
+            <div
+              class="feat-line wow animate__animated animate__slideInUp"
+              style="animation-delay: 0.6s"
+            >
+              <span><i class="fa-solid fa-check"></i></span>
+              <h3>Repellendus molli</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="alt-features-section">
+      <div class="container">
+        <div class="alt-feat-content">
+          <div
+            class="alt-feat-text animate__animated animate__slideInUp wow"
+            style="animation-delay: 0.4s"
+          >
+            <div class="alt-feat-line">
+              <span><i class="ri-award-line"></i></span>
+              <div class="alt-feat-line-text">
+                <h4>Corporis voluptates sit</h4>
+                <p>
+                  Consequuntur sunt aut quasi enim aliquam quae harum pariatur
+                  laboris nisi ut aliquip
+                </p>
+              </div>
+            </div>
+            <div class="alt-feat-line">
+              <span><i class="ri-list-check-3"></i></span>
+              <div class="alt-feat-line-text">
+                <h4>Ullamco laboris nisi</h4>
+                <p>
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                  qui officia deserunt
+                </p>
+              </div>
+            </div>
+            <div class="alt-feat-line">
+              <span><i class="ri-basketball-line"></i></span>
+              <div class="alt-feat-line-text">
+                <h4>Labore consequatur</h4>
+                <p>
+                  Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut
+                  maiores omnis facere
+                </p>
+              </div>
+            </div>
+            <div class="alt-feat-line">
+              <span><i class="ri-filter-3-line"></i></span>
+              <div class="alt-feat-line-text">
+                <h4>Beatae veritatis</h4>
+                <p>
+                  Expedita veritatis consequuntur nihil tempore laudantium vitae
+                  denat pacta
+                </p>
+              </div>
+            </div>
+            <div class="alt-feat-line">
+              <span><i class="fa-solid fa-bolt"></i></span>
+              <div class="alt-feat-line-text">
+                <h4>Molestiae dolor</h4>
+                <p>
+                  Et fuga et deserunt et enim. Dolorem architecto ratione tensa
+                  raptor marte
+                </p>
+              </div>
+            </div>
+            <div class="alt-feat-line">
+              <span><i class="ri-checkbox-circle-line"></i></span>
+              <div class="alt-feat-line-text">
+                <h4>Explicabo consectetur</h4>
+                <p>
+                  Est autem dicta beatae suscipit. Sint veritatis et sit quasi
+                  ab aut inventore
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="alt-feat-img animate__animated animate__fadeIn wow"
+            style="animation-delay: 0.2s"
+          >
+            <img src="./alt-features.png" alt="alt-feat-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services-section">
+      <div class="container">
+        <div class="title-value wow animate__animated animate__slideInUp">
+          <h2>Services</h2>
+          <p>Check Our Services</p>
+        </div>
+        <div class="services-cards">
+          <a href="#hero-section" class="services-card">
+            <i class="top-icon ri-pulse-line"></i>
+            <h3>Nesciunt Mete</h3>
+            <p>
+              Provident nihil minus qui consequatur non omnis maiores. Eos
+              accusantium minus dolores iure perferendis tempore et consequatur.
+            </p>
+            <p class="p-end">Read more <i class="fa-solid fa-arrow-right-long"></i></p>
+          </a>
+          <a href="#hero-section" class="services-card">
+            <i class="top-icon ri-base-station-line"></i>
+            <h3>Eosle Commodi</h3>
+            <p>
+              Ut autem aut autem non a. Sint sint sit facilis nam iusto sint.
+              Libero corrupti neque eum hic non ut nesciunt dolorem.
+            </p>
+            <p class="p-end">Read more <i class="fa-solid fa-arrow-right-long"></i></p>
+          </a>
+          <a href="#hero-section" class="services-card">
+            <i class="top-icon ri-tv-line"></i>
+            <h3>Ledo Markt</h3>
+            <p>
+              Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus
+              ea aut. Vel qui id voluptas adipisci eos earum corrupti.
+            </p>
+            <p class="p-end">Read more <i class="fa-solid fa-arrow-right-long"></i></p>
+          </a>
+          <a href="#hero-section" class="services-card">
+            <i class="top-icon ri-artboard-2-line"></i>
+            <h3>Asperiores Commodi</h3>
+            <p>
+              Non et temporibus minus omnis sed dolor esse consequatur.
+              Cupiditate sed error ea fuga sit provident adipisci neque.
+            </p>
+            <p class="p-end">Read more <i class="fa-solid fa-arrow-right-long"></i></p>
+          </a>
+          <a href="#hero-section" class="services-card">
+            <i class="top-icon ri-calendar-todo-fill"></i>
+            <h3>Velit Doloremque.</h3>
+            <p>
+              Cumque et suscipit saepe. Est maiores autem enim facilis ut aut
+              ipsam corporis aut. Sed animi at autem alias eius labore.
+            </p>
+            <p class="p-end">Read more <i class="fa-solid fa-arrow-right-long"></i></p>
+          </a>
+          <a href="#hero-section" class="services-card">
+            <i class="top-icon ri-message-2-line"></i>
+            <h3>Dolori Architecto</h3>
+            <p>
+              Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque
+              non et debitis iure. Corrupti recusandae ducimus enim.
+            </p>
+            <p
+               class="p-end">Read more <i class="fa-solid fa-arrow-right-long"></i
+            ></p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- JS -->
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+    <!-- observer for odometer stats -->
+    <script>
+      const states = document.querySelector("#states-section");
+
+      const statsObserver = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            console.log("States section is visible");
+            setTimeout(() => {
+              document.getElementById("count-1").innerHTML = 232;
+              document.getElementById("count-2").innerHTML = 521;
+              document.getElementById("count-3").innerHTML = 1463;
+              document.getElementById("count-4").innerHTML = 15;
+            }, 0);
+            statsObserver.disconnect(); // يمنع التكرار
+          }
+        },
+        {
+          root: null,
+          threshold: 0.3,
+        }
+      );
+
+      statsObserver.observe(states);
+    </script>
+
+    <!-- observer for header transparency -->
     <script>
       const header = document.querySelector("header");
-      const heroSection = document.querySelector("#hero-section");
       const heroImg = document.querySelector("#hero-img");
 
-      const observer = new IntersectionObserver(
+      const headerObserver = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
             header.classList.add("transparent");
@@ -136,7 +450,7 @@
         }
       );
 
-      observer.observe(heroImg);
+      headerObserver.observe(heroImg);
     </script>
   </body>
 </html>
