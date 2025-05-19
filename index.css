@@ -11,6 +11,9 @@ html {
   /* font-family: "Poppins", sans-serif; */
   font-family: "Roboto", sans-serif;
 }
+body {
+  background-color: #f2f3fb;
+}
 .container {
   width: 100%;
   max-width: 1320px;
@@ -258,9 +261,11 @@ header {
     }
   }
   .left-about {
-    width: 558px;
+    background-color: #e9ebfa;
+
+    width: 758px;
     max-width: 100%;
-    padding: 40px 0;
+    padding: 40px;
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -324,25 +329,29 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
-      row-gap: 30px;
+      gap: 30px;
 
       @media screen and (max-width: 767px) {
         flex-direction: column;
       }
 
       .card {
-        width: 356px;
+        background-color: #fff;
+        height: 494px;
+        width: calc((100% - 30px) / 3);
         max-width: 100%;
         padding: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
         &:hover > img {
           transform: scale(0.9);
         }
         @media screen and (max-width: 767px) {
-          width: 461px;
+          width: calc((100% - 1vw));
         }
 
         img {
@@ -383,13 +392,22 @@ header {
     @media screen and (max-width: 767px) {
       flex-direction: column;
       align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
     .state {
+      width: calc((100% - 2rem) / 4);
+      max-width: 100%;
+      background-color: #fff;
       padding: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 25px;
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        justify-content: flex-start;
+      }
     }
     i {
       font-size: 42px;
@@ -398,6 +416,7 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      align-items: flex-start;
       h2 {
         font-size: 36px;
         font-weight: 600;
@@ -579,9 +598,9 @@ header {
 
   .container {
     flex-direction: column;
-     @media screen and (max-width: 767px) {
-        padding: 0 12px;
-      }
+    @media screen and (max-width: 767px) {
+      padding: 0 12px;
+    }
 
     .services-cards {
       display: flex;
@@ -606,7 +625,7 @@ header {
         border-radius: 5px;
         transition: 0.2s;
         @media screen and (max-width: 767px) {
-        width: calc((100% - 1vw));
+          width: calc((100% - 1vw));
         }
 
         .top-icon {
@@ -778,6 +797,156 @@ header {
           color: #ffffff;
         }
         border-bottom: 2px solid #f3268c;
+      }
+    }
+  }
+}
+
+#pricing-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  .container {
+    flex-direction: column;
+    .pricing-cards {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      .pricing-card {
+        background-color: #ffffff;
+        width: calc((100% - 6rem) / 4);
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+        color: #444444;
+        transition: 0.3s;
+        @media screen and (max-width: 767px) {
+          width: 100%;
+          &:hover {
+            transform: none !important;
+          }
+        }
+
+        h3 {
+          line-height: 24px;
+          font-size: 18px;
+          font-family: "Nunito", sans-serif;
+          font-weight: 700;
+          margin-bottom: 30px;
+        }
+
+        .price {
+          display: flex;
+          color: #012970;
+          font-family: "Nunito", sans-serif;
+          sup {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 0px;
+          }
+          h4 {
+            font-size: 36px;
+            font-weight: 400;
+          }
+          span {
+            position: relative;
+            top: 20px;
+            color: #444444;
+          }
+        }
+        i {
+          font-size: 48px;
+          padding: 20px 0;
+        }
+        ul {
+          list-style-type: none;
+          li {
+            padding-bottom: 10px;
+          }
+        }
+        a {
+          margin: 40px 0 0 0;
+          font-family: "Nunito", sans-serif;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+          color: #4e60f2;
+          text-transform: capitalize;
+          padding: 8px 40px;
+          text-decoration: none;
+          border-radius: 50px;
+          border: 1px solid #4e60f2;
+          transition: 0.3s;
+        }
+        a:hover {
+          background-color: #4e60f2;
+          color: white;
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      .pricing-card:nth-child(1) {
+        h3,
+        i {
+          color: #20c997;
+        }
+        ul {
+          li:nth-child(4),
+          li:nth-child(5) {
+            color: #44444452;
+            text-decoration: line-through;
+          }
+        }
+      }
+      .pricing-card:nth-child(2) {
+        position: relative;
+        overflow: hidden;
+        P {
+          color: white;
+          background-color: #4154f1;
+          width: 300px;
+          position: absolute;
+          top: 20px;
+          right: -111px;
+          transform: rotate(44deg);
+          padding: 5px 0;
+        }
+        h3,
+        i {
+          color: #0dcaf0;
+        }
+        ul {
+          li:nth-child(5) {
+            color: #44444452;
+            text-decoration: line-through;
+          }
+        }
+      }
+      .pricing-card:nth-child(3) {
+        h3,
+        i {
+          color: #fd7e14;
+        }
+      }
+      .pricing-card:nth-child(4) {
+        h3,
+        i {
+          color: #0d6efd;
+        }
       }
     }
   }
