@@ -11,6 +11,7 @@ html {
   /* font-family: "Poppins", sans-serif; */
   font-family: "Roboto", sans-serif;
 }
+
 body {
   background-color: #f2f3fb;
 }
@@ -80,6 +81,9 @@ body {
   &:hover > i {
     translate: 5px;
   }
+}
+a{
+  text-decoration: none !important;
 }
 
 header {
@@ -853,6 +857,9 @@ header {
           color: #012970;
           font-family: "Nunito", sans-serif;
           sup {
+            position: relative;
+            right: 3px;
+            top: 15px;
             font-size: 20px;
             font-weight: 600;
             line-height: 0px;
@@ -873,6 +880,7 @@ header {
         }
         ul {
           list-style-type: none;
+          padding: 0%;
           li {
             padding-bottom: 10px;
           }
@@ -983,6 +991,8 @@ header {
       border-bottom: 1px solid #44444441;
       position: relative;
       font-weight: 400;
+      font-size: 18px;
+      margin: 0%;
       padding: 20px;
       transition: 0.3s;
       cursor: pointer;
@@ -1059,6 +1069,7 @@ header {
           transition: 0.3s;
         }
         .overlay {
+          text-align: center;
           color: #fff;
           background-color: #0000008c;
           width: 100%;
@@ -1098,9 +1109,8 @@ header {
           h3 {
             position: absolute;
             bottom: 20px;
-            left: 50%;
-            transform: translateX(-40%);
             width: 100%;
+            font-size: 20px !important;
           }
         }
       }
@@ -1149,7 +1159,7 @@ header {
           color: #444444;
         }
       }
-      
+
       .swiper-pagination-bullet {
         background: #012970;
         opacity: 0.5;
@@ -1182,6 +1192,77 @@ header {
   }
 }
 
+#team-section {
+  .container {
+    .team-cards {
+      gap: 1.5rem;
+      .team-card {
+        font-family: "Nunito", sans-serif !important;
+        transition: 0.5s;
+        width: calc((100% - 1.5rem) / 4) !important;
+        max-width: 100% !important;
+        @media screen and (max-width: 767px) {
+          width: 100% !important;
+          &:hover {
+            transform: none !important;
+          }
+        }
+        &:hover .social-icons {
+          transform: translateX(0px);
+        }
+        .social-icons {
+          z-index: 10;
+          background: #ffffff42;
+          padding: 10px 15px;
+          right: 10px;
+          top: 30px;
+          border-radius: 10px;
+          transform: translateX(60px);
+          transition: 0.5s;
+          i {
+            font-size: clamp(18px , 1vw , 24px);
+            margin-bottom: 10px;
+            color: #444444 !important;
+            opacity: 50%;
+            transition: 0.5s;
+            cursor: pointer;
+            &:hover{
+              color: #444444;
+              opacity: 100%;
+            }
+          }
+        }
+        .image {
+          .wavy {
+            bottom: -43px;
+            width: 100%;
+          }
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
+        .team-c-info {
+          font-style: italic !important;
+        }
+        p {
+          font-family: "Nunito", sans-serif !important;
+          font-size: 14px !important;
+          line-height: 21px !important;
+          text-align: center !important;
+          padding: 0 20px !important;
+        }
+        h4 {
+          font-family: "Nunito", sans-serif !important;
+          font-size: 20px !important;
+          font-weight: 700 !important;
+          line-height: 24px !important;
+          color: #012970;
+        }
+      }
+    }
+  }
+}
+
 /* animation */
 @keyframes up-down {
   0% {
@@ -1208,4 +1289,23 @@ header.scrolled {
 
 .odometer {
   background: transparent !important;
+}
+
+marquee{
+  img{
+    width: 150px;
+  }
+}
+
+.up-btn{
+  bottom: 15px;
+  right: 15px;
+  z-index: 22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #4154F1;
 }
