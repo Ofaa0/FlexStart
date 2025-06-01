@@ -1518,19 +1518,22 @@ marquee {
 }
 
 footer {
-  border-top: 1px solid #4444443b ;
+  border-top: 1px solid #4444443b;
   width: 100%;
   .container {
     h4,
     p {
       margin: 0 !important;
     }
-    .last{
+    .last , .first{
       align-self: start !important;
     }
     .l1,
     .l2 {
       width: calc(100% / 4) !important;
+      @media screen and (max-width: 767px) {
+        width: 100% !important;
+      }
     }
     .l1 {
       h4 {
@@ -1564,6 +1567,7 @@ footer {
           padding: 10px;
           cursor: pointer;
           transition: 0.5s;
+          color: #4154f1;
           &:hover {
             background-color: #4154f1;
             color: white;
@@ -1597,5 +1601,11 @@ footer {
         margin-right: 6px;
       }
     }
+  }
+}
+
+#author{
+  p{
+    font-size: clamp(14px , .5vw , 32px) !important;
   }
 }
